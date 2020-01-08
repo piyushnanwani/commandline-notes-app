@@ -49,5 +49,10 @@ class Notebook:
         ''' Find all the notes that match the given filter string. '''
         return [note for note in self.notes if note.match(filter)] 
 
-        
+    def _find_note(self, note_id):
+        ''' Locate the note with the given id. '''
+        for note in self.notes :
+            if note.id == note_id:
+                return note 
+        return None
 
